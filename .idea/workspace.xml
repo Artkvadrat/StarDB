@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/app/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/itemList/itemList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/itemList/itemList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/personDetails/personDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/personDetails/personDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/planetDetails/planetDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/planetDetails/planetDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/randomPlanet/randomPlanet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/randomPlanet/randonPlanet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/starshipDetails/starshipDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/starshipDetails/starshipDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/swapiService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -17,6 +34,14 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -24,6 +49,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,7 +100,18 @@
       <updated>1572973426942</updated>
       <workItem from="1572973429703" duration="435000" />
       <workItem from="1572974385641" duration="2498000" />
+      <workItem from="1572982984851" duration="46000" />
+      <workItem from="1573064515165" duration="3690000" />
+      <workItem from="1573070293173" duration="508000" />
     </task>
+    <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
+      <created>1572983019747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572983019747</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +129,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="File &quot;index.js&quot; with simple fetch request." />
+    <option name="LAST_COMMIT_MESSAGE" value="File &quot;index.js&quot; with simple fetch request." />
   </component>
 </project>
