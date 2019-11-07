@@ -1,0 +1,38 @@
+.randomPlanet {
+    background-color: #212227;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.planetImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+h3 {
+    color: white;
+    background-color: #212227;
+}
+
+.planetList{
+    padding-left: 25px;
+    padding-top: 25px;
+    background-color: #212227;
+}
+
+.list-group {
+    color: white;
+}
+
+.list-group-item {
+    background-color: #212227 !important;
+}
+
+.planetList span {
+    background-color: #212227
+}
+
+.term {
+    margin-right: 10px;
+}

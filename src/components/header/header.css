@@ -1,3 +1,37 @@
-li {
-    display: inline-block;
+.header {
+    margin-top: 25px;
 }
+
+.header li {
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 5px;
+    line-height: 42px;
+}
+
+.header ul li:hover {
+    border: 0 solid;
+    border-radius: 10px;
+    background-color: #444;
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+.header h2 a{
+    color: white;
+}
+
+.header h2 a:hover{
+    color: #00bc8c;
+}
+
+.header li a {
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #00bc8c;
+}
+
+

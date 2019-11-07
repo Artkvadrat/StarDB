@@ -1,0 +1,39 @@
+.personDetails {
+    margin-top: 25px;
+    background-color: #212227;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.personImage {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+h3 {
+    color: white;
+    background-color: #212227;
+}
+
+.personList{
+    padding-left: 25px;
+    padding-top: 15px;
+    background-color: #212227;
+}
+
+.list-group {
+    color: white;
+}
+
+.list-group-item {
+    background-color: #212227 !important;
+}
+
+.personList span {
+    background-color: #212227
+}
+
+.term {
+    margin-right: 10px;
+}

@@ -4,12 +4,28 @@ import './header.css';
 const Header = () => {
 
     return (
-        <div className='d-flex justify-content-between'>
-            <h1>Star DB</h1>
+        <div className='header d-flex justify-content-between'>
+            <h2>
+                <a href="#">
+                    Star DB
+                </a>
+            </h2>
             <ul>
-                <li>People</li>
-                <li>Planets</li>
-                <li>Starships</li>
+                <li>
+                    <a href="#">
+                        People
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Planets
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Starships
+                    </a>
+                </li>
             </ul>
         </div>
     )

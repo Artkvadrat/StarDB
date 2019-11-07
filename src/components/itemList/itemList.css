@@ -1,0 +1,7 @@
+.itemList {
+    margin-top: 35px;
+    margin-left: 0;
+}
+.list li {
+    border-color: rgba(37, 42, 46, 0.56);
+}
