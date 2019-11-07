@@ -7,7 +7,7 @@ export default class ItemList extends Component{
         return(
             <div className='itemList'>
                 <ul className="item-list list-group">
-                    <li className='list-group-item'>
+                    <li className='list-group-item' >
                         Luke Skywalker
                     </li>
                     <li className='list-group-item'>

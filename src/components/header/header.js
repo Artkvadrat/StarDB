@@ -4,7 +4,7 @@ import './header.css';
 const Header = () => {
 
     return (
-        <div className='header d-flex justify-content-between'>
+        <div className='header d-flex justify-content-center'>
             <h2>
                 <a href="#">
                     Star DB

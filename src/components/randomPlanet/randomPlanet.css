@@ -10,7 +10,7 @@
     border-radius: 15px;
 }
 
-h3 {
+.planetList h3 {
     color: white;
     background-color: #212227;
 }
@@ -21,11 +21,11 @@ h3 {
     background-color: #212227;
 }
 
-.list-group {
+.planetList .list-group {
     color: white;
 }
 
-.list-group-item {
+.planetList .list-group-item {
     background-color: #212227 !important;
 }
 
@@ -35,4 +35,8 @@ h3 {
 
 .term {
     margin-right: 10px;
+}
+
+.spinner {
+    border-color: white;
 }

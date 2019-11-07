@@ -10,14 +10,23 @@ export default class App extends Component {
 
     render() {
         return(
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='row justify-content-center'>
-                    <div className='col-md-7'>
+                    <div className='col-md-9'>
                         <Header/>
-                        <RandomPlanet />
+                        <div className="row justify-content-between">
+                            <div className="col-md-12">
+                                <RandomPlanet />
+                            </div>
+                            <div className="col-lg-4 col-md-12">
+                                <ItemList />
+                            </div>
+                            <div className="col-lg-8 col-md-12">
+                                <PersonDetails />
+                            </div>
 
-                        <ItemList />
-                        <PersonDetails />
+
+                        </div>
                     </div>
                 </div>
             </div>

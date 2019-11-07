@@ -2,6 +2,12 @@
     margin-top: 35px;
     margin-left: 0;
 }
-.list li {
+.itemList .list-group-item {
     border-color: rgba(37, 42, 46, 0.56);
+    background-color: #212227;
+    color: white;
+}
+
+.itemList .list-group-item:hover {
+    background-color: rgba(49, 55, 59, 0.56);
 }
