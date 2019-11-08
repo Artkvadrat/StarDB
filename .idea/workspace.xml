@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/errorIndicator/errorIndicator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/errorIndicator/errorIndicator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/randomPlanet/randonPlanet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/randomPlanet/randonPlanet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,6 +46,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\_Projects\React Bootcamp\Star-DB\public" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,7 +97,7 @@
       <workItem from="1573131980435" duration="3926000" />
       <workItem from="1573136662395" duration="3905000" />
       <workItem from="1573147952187" duration="7198000" />
-      <workItem from="1573226656985" duration="2879000" />
+      <workItem from="1573226656985" duration="6178000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -118,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573155340428</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I have remaded a fetch requests in swapiWervice.js.">
+      <created>1573230513442</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573230513442</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added a working spinner on loading in random planet.">
+      <created>1573230552985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573230552985</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +165,7 @@
     <MESSAGE value="I was made a components system with including &quot;Bootstrap&quot;. And I have started to do a header component." />
     <MESSAGE value="I was made a simple css for sites components using 'Bootstrap'. Also added a random planet showing  but without time interval." />
     <MESSAGE value="I have remaded a fetch requests in swapiWervice.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="I have remaded a fetch requests in swapiWervice.js." />
+    <MESSAGE value="Added a working spinner on loading in random planet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a working spinner on loading in random planet." />
   </component>
 </project>
