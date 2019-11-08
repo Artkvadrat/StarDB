@@ -43,7 +43,7 @@ export default class RandomPlanet extends Component{
         return (
             <div className='randomPlanet d-flex justify-content-center'>
                 { spinner }
-                {planetView}
+                {planetView }
             </div>
         )
     }
