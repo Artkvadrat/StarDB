@@ -8,7 +8,18 @@ import PersonDetails from "../personDetails/personDetails";
 
 export default class App extends Component {
 
+    state = {
+        selectedPerson: 1
+    };
+
+    onPersonSelected = (id) => {
+        this.setState({
+            selectedPerson: id
+        });
+    };
+
     render() {
+
         return(
             <div className='container-fluid'>
                 <div className='row justify-content-center'>
@@ -19,10 +30,10 @@ export default class App extends Component {
                                 <RandomPlanet />
                             </div>
                             <div className="col-lg-4 col-md-12">
-                                <ItemList />
+                                <ItemList  onItemSelected={ this.onPersonSelected }/>
                             </div>
                             <div className="col-lg-8 col-md-12">
-                                <PersonDetails />
+                                <PersonDetails personId={ this.state.selectedPerson  }/>
                             </div>
 
 

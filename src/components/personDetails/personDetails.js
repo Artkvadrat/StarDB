@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import './personDetails.css';
+import SwapiService from "../../services/swapiService";
 
 export default class PersonDetails extends Component {
+
+    swapiService = new SwapiService();
+
+    state = {
+        person: {},
+        loading: true,
+        error: false
+    };
+
     render() {
+
+        const { personId } = this.props;
+
         return (
             <div className='personDetails d-flex'>
                 <div>
