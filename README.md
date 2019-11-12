@@ -1,4 +1,4 @@
-#StarWars Data Base
+# StarWars Data Base
 
 A site based on React UI with using a fetch API in vanilla JS.
 
