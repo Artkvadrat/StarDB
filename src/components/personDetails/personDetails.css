@@ -14,6 +14,7 @@
 .personList h3 {
     color: white;
     background-color: #212227;
+    cursor: default;
 }
 
 .personList{
@@ -28,6 +29,7 @@
 
 .personList .list-group-item {
     background-color: #212227 !important;
+    cursor: default;
 }
 
 .personList span {

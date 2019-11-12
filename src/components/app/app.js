@@ -5,11 +5,13 @@ import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
 import ItemList from "../itemList/itemList";
 import PersonDetails from "../personDetails/personDetails";
+import ErrorIndicator from "../errorIndicator/errorIndicator";
 
 export default class App extends Component {
 
     state = {
-        selectedPerson: 1
+        selectedPerson: 1,
+        errorIndicator: false
     };
 
     onPersonSelected = (id) => {
@@ -18,7 +20,17 @@ export default class App extends Component {
         });
     };
 
+    componentDidCatch() {
+        this.setState( {
+            errorIndicator: true
+        })
+    }
+
     render() {
+
+        if ( this.state.errorIndicator ) {
+            return <ErrorIndicator/>
+        }
 
         return(
             <div className='container-fluid'>

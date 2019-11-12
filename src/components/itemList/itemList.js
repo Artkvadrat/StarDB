@@ -4,13 +4,16 @@ import './itemList.css';
 
 import SwapiService from "../../services/swapiService";
 import Spinner from "../spinner/spinner";
+import ErrorIndicator from "../errorIndicator/errorIndicator";
 
 export default class ItemList extends Component{
 
     swapiService = new SwapiService();
 
     state = {
-        peopleList: null
+        peopleList: null,
+        loading: true,
+        error: false
     };
 
     renderItems(arr) {
@@ -25,28 +28,42 @@ export default class ItemList extends Component{
         });
     }
 
+    onError = ( err ) => {
+        this.setState( {
+            error: true,
+            loading: false
+        });
+    };
+
+    onListLoaded = ( peopleList ) => {
+        this.setState({
+            peopleList,
+            loading: false
+        });
+    }
+
     componentDidMount() {
         this.swapiService
             .getAllPeople()
-            .then( ( peopleList ) => {
-                this.setState({
-                    peopleList
-                });
-            });
+            .then( this.onListLoaded )
+            .catch( this.onError )
     }
 
     render() {
 
-        const { peopleList } = this.state;
+        const { peopleList, loading, error } = this.state;
 
-        if ( !peopleList ) {
-            return <Spinner />;
-        }
+        const hasData = !( loading || error );
 
-        const items = this.renderItems( peopleList );
+        const errorMessage = error ? <ErrorIndicator/> : null;
+        const spinner = loading ? <Spinner/> : null;
+        const items = hasData ? this.renderItems( peopleList ) : null;
+
 
         return(
-            <div className='itemList'>
+            <div className='itemList justify-content-center'>
+                { errorMessage }
+                { spinner }
                 { items }
             </div>
         )

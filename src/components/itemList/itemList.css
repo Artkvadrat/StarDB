@@ -10,4 +10,5 @@
 
 .itemList .list-group-item:hover {
     background-color: rgba(49, 55, 59, 0.56);
+    cursor: pointer;
 }

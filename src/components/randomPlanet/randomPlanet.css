@@ -13,6 +13,7 @@
 .planetList h3 {
     color: white;
     background-color: #212227;
+    cursor: default;
 }
 
 .planetList{
@@ -27,6 +28,7 @@
 
 .planetList .list-group-item {
     background-color: #212227 !important;
+    cursor: default;
 }
 
 .planetList span {

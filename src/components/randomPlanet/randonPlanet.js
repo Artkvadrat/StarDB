@@ -19,7 +19,10 @@ export default class RandomPlanet extends Component{
     componentDidMount() {
         this.updatePlanet();
         this.interval = setInterval( this.updatePlanet, 15000 );
-        // clearInterval( this.interval );
+    }
+
+    componentWillUnmount() {  // to clean up a functions like "setInterval";
+        clearInterval( this.interval );
     }
 
     onPlanetLoaded = ( planet ) => {
@@ -50,15 +53,15 @@ export default class RandomPlanet extends Component{
 
         const hasData = !( loading || error );
 
-        const errorMessage = error ? <ErrorIndicator/> : null;
+        const errorMessage = error ? <ErrorIndicator/> : null;   // catcher of error and a spinner
         const spinner = loading ? <Spinner/> : null;
         const planetView = hasData ? <PlanetView planet={planet}/> : null;
 
         return (
             <div className='randomPlanet d-flex justify-content-center'>
-                {errorMessage}
+                { errorMessage }
                 { spinner }
-                {planetView }
+                { planetView }
             </div>
         )
     }
@@ -74,7 +77,7 @@ const PlanetView = ( { planet } ) => {
             <div>
                     <img className="planetImage"
                          src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
-                         alt="Random Planet"/>
+                         alt={name}/>
                 </div>
             <div className='planetList'>
                     <h3>{name}</h3>
