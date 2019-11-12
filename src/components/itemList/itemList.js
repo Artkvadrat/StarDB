@@ -40,7 +40,7 @@ export default class ItemList extends Component{
             peopleList,
             loading: false
         });
-    }
+    };
 
     componentDidMount() {
         this.swapiService

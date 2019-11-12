@@ -4,20 +4,13 @@ import './app.css';
 import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
 import ItemList from "../itemList/itemList";
-import PersonDetails from "../personDetails/personDetails";
+import PeoplePage from "../peoplePage/peoplePage";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 
 export default class App extends Component {
 
     state = {
-        selectedPerson: 1,
         errorIndicator: false
-    };
-
-    onPersonSelected = (id) => {
-        this.setState({
-            selectedPerson: id
-        });
     };
 
     componentDidCatch() {
@@ -41,13 +34,8 @@ export default class App extends Component {
                             <div className="col-md-12">
                                 <RandomPlanet />
                             </div>
-                            <div className="col-lg-4 col-md-12">
-                                <ItemList  onItemSelected={ this.onPersonSelected }/>
-                            </div>
-                            <div className="col-lg-8 col-md-12">
-                                <PersonDetails personId={ this.state.selectedPerson  }/>
-                            </div>
 
+                            <PeoplePage />
 
                         </div>
                     </div>
