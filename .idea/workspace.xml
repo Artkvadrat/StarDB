@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/errorIndicator/error-404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rowComponent/rowComponent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rowComponent/rowComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/errorIndicator/errorIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/errorIndicator/errorIndicator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/itemList/itemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemList/itemList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/personDetails/personDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/personDetails/personDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/swapiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/swapiService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +104,8 @@
       <workItem from="1573226656985" duration="6333000" />
       <workItem from="1573331178550" duration="1723000" />
       <workItem from="1573388659503" duration="5596000" />
+      <workItem from="1573743902019" duration="237000" />
+      <workItem from="1573744181671" duration="4449000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -163,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573587106260</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="I have remade a structure of App.js: add a PeoplePage component with ItemList and PersonDetails component inside. This is for easier error catch.">
+      <created>1573589045717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573589045717</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +215,7 @@
     <MESSAGE value="Add an error message showing." />
     <MESSAGE value="Remade a calling of &quot;this.updatePlanet&quot; (remove it from &quot;constructor&quot;, and add to &quot;componentDidMount&quot;). Also this component is calling every ten seconds." />
     <MESSAGE value="A have made a personDetails component, that show a specific information about a character. Also I added a error catcher in App.js using &quot;componentDidCatch&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="A have made a personDetails component, that show a specific information about a character. Also I added a error catcher in App.js using &quot;componentDidCatch&quot;." />
+    <MESSAGE value="I have remade a structure of App.js: add a PeoplePage component with ItemList and PersonDetails component inside. This is for easier error catch." />
+    <option name="LAST_COMMIT_MESSAGE" value="I have remade a structure of App.js: add a PeoplePage component with ItemList and PersonDetails component inside. This is for easier error catch." />
   </component>
 </project>

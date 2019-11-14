@@ -7,7 +7,7 @@
 
 .personImage {
     width: 250px;
-    height: 250px;
+    height: auto;
     border-radius: 15px;
 }
 

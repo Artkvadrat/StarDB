@@ -4,8 +4,12 @@ import './peoplePage.css';
 import PersonDetails from "../personDetails/personDetails";
 import ItemList from "../itemList/itemList";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
+import SwapiService from "../../services/swapiService";
+import Row from "../rowComponent/rowComponent";
 
 export default class PeoplePage extends Component {
+
+    swapiService = new SwapiService();
 
     state = {
         selectedPerson: 1,
@@ -30,15 +34,20 @@ export default class PeoplePage extends Component {
             return <ErrorIndicator/>
         }
 
+        const itemList = (
+            <ItemList
+                onItemSelected={ this.onPersonSelected }
+                getData={ this.swapiService.getAllPeople }
+                renderItem={ ({ name, gender, birthYear }) => `${name} (${gender}, ${birthYear})` }
+            />
+        );
+
+        const personDetails = (
+            <PersonDetails personId={ this.state.selectedPerson  }/>
+        );
+
         return (
-            <React.Fragment>
-                <div className="col-lg-4 col-md-12">
-                    <ItemList  onItemSelected={ this.onPersonSelected }/>
-                </div>
-                <div className="col-lg-8 col-md-12">
-                    <PersonDetails personId={ this.state.selectedPerson  }/>
-                </div>
-            </React.Fragment>
+            <Row left={itemList} right={personDetails}/>
         )
     }
 

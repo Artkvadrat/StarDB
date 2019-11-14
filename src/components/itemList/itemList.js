@@ -2,27 +2,28 @@ import React, { Component } from "react";
 import './itemList.css';
 
 
-import SwapiService from "../../services/swapiService";
 import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 
 export default class ItemList extends Component{
 
-    swapiService = new SwapiService();
-
     state = {
-        peopleList: null,
+        itemList: null,
         loading: true,
         error: false
     };
 
     renderItems(arr) {
-        return arr.map( ( {id, name} ) => {
+        return arr.map( (item) => {
+
+            const { id } = item;
+            const label = this.props.renderItem( item );
+
             return (
                 <li className='list-group-item'
                     key={id}
                     onClick={ () => this.props.onItemSelected(id) }>
-                    { name }
+                    { label }
                 </li>
             )
         });
@@ -35,29 +36,31 @@ export default class ItemList extends Component{
         });
     };
 
-    onListLoaded = ( peopleList ) => {
+    onListLoaded = ( itemList ) => {
         this.setState({
-            peopleList,
+            itemList,
             loading: false
         });
     };
 
     componentDidMount() {
-        this.swapiService
-            .getAllPeople()
+
+        const { getData } = this.props;
+
+        getData()
             .then( this.onListLoaded )
             .catch( this.onError )
     }
 
     render() {
 
-        const { peopleList, loading, error } = this.state;
+        const { itemList, loading, error } = this.state;
 
         const hasData = !( loading || error );
 
         const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const items = hasData ? this.renderItems( peopleList ) : null;
+        const items = hasData ? this.renderItems( itemList ) : null;
 
 
         return(
