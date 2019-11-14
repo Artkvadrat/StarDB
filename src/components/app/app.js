@@ -3,11 +3,12 @@ import './app.css';
 
 import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
-import ItemList from "../itemList/itemList";
+
 import PeoplePage from "../peoplePage/peoplePage";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
-import PersonDetails from "../personDetails/personDetails";
 import SwapiService from "../../services/swapiService";
+import ItemDetails from "../itemDetails/itemDetails";
+import Row from "../rowComponent/rowComponent";
 
 export default class App extends Component {
 
@@ -29,6 +30,24 @@ export default class App extends Component {
             return <ErrorIndicator/>
         }
 
+        const { getPerson, getStarship } = this.swapiService;
+
+
+        const personDetails = (
+            <ItemDetails
+                itemId={11}
+                getData={ getPerson }
+            />
+        );
+
+        const starshipDetails = (
+            <ItemDetails
+                itemId={1}
+                getData={ getStarship }
+            />
+        );
+
+
         return(
             <div className='container-fluid'>
                 <div className='row justify-content-center'>
@@ -39,31 +58,10 @@ export default class App extends Component {
                                 <RandomPlanet />
                             </div>
 
-                            <PeoplePage />
-
-
-                            <div className="col-lg-4 col-md-12">
-                                <ItemList
-                                    onItemSelected={ this.onPersonSelected }
-                                    getData={ this.swapiService.getAllPlanets }
-                                    renderItem={ (item) => item.name }
-                                />
-                            </div>
-                            <div className="col-lg-8 col-md-12">
-                                <PersonDetails personId={ this.state.selectedPerson  }/>
-                            </div>
-
-                            <div className="col-lg-4 col-md-12">
-                                <ItemList
-                                    onItemSelected={ this.onPersonSelected }
-                                    getData={ this.swapiService.getAllStarships }
-                                    renderItem={ (item) => item.name }
-                                />
-                            </div>
-                            <div className="col-lg-8 col-md-12">
-                                <PersonDetails personId={ this.state.selectedPerson  }/>
-                            </div>
-
+                            <Row
+                                left={personDetails}
+                                right={starshipDetails}
+                            />
 
                         </div>
                     </div>

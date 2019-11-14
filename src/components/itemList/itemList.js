@@ -17,7 +17,7 @@ export default class ItemList extends Component{
         return arr.map( (item) => {
 
             const { id } = item;
-            const label = this.props.renderItem( item );
+            const label = this.props.renderItem(item);
 
             return (
                 <li className='list-group-item'
@@ -27,6 +27,10 @@ export default class ItemList extends Component{
                 </li>
             )
         });
+    }
+
+    componentDidCatch(error, errorInfo) {
+        console.error( errorInfo);
     }
 
     onError = ( err ) => {
@@ -55,6 +59,7 @@ export default class ItemList extends Component{
     render() {
 
         const { itemList, loading, error } = this.state;
+        console.log( itemList );
 
         const hasData = !( loading || error );
 

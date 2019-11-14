@@ -6,7 +6,7 @@ const  ErrorIndicator = () => {
 
     return (
         <div className='errorIndicator'>
-            <img src={errorImage}/>
+            <img src={errorImage} alt="Error"/>
             <span className='boom'><br/>Boom!<br/></span>
             <span>
                 Something was going wrong!<br/>

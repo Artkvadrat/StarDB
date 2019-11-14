@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import './personDetails.css';
+import './itemDetails.css';
 import SwapiService from "../../services/swapiService";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 import Spinner from "../spinner/spinner";
 
-export default class PersonDetails extends Component {
+export default class ItemDetails extends Component {
 
     swapiService = new SwapiService();
 
     state = {
-        person: {},
+        item: {},
         loading: true,
         error: false
     };
 
     componentDidMount() {
-        this.updatePerson();
+        this.updateItem();
     }
 
     componentDidUpdate(prevProps) { // we use it if something will change during execution
-        if ( this.props.personId !== prevProps.personId ) { // if use in componentDidUpdate a setState, we should
+        if ( this.props.itemId !== prevProps.itemId ) { // if use in componentDidUpdate a setState, we should
                                                             // use a if statement
             this.setState({
                 loading: true
             });
-            this.updatePerson();
+            this.updateItem();
         }
     }
 
@@ -35,34 +35,33 @@ export default class PersonDetails extends Component {
         });
     };
 
-    onPersonLoaded = (person) => {
+    onItemLoaded = (item) => {
         this.setState({
-            person,
+            item,
             loading: false
         })
     };
 
 
-    updatePerson = (  ) => {
+    updateItem = (  ) => {
 
-        const { personId } = this.props;
+        const { itemId, getData } = this.props;
 
-        this.swapiService
-            .getPerson( personId )
-            .then( this.onPersonLoaded )
+        getData( itemId )
+            .then( this.onItemLoaded )
             .catch( this.onError )
     };
 
     render() {
 
 
-        const { person, loading, error } = this.state;
+        const { item, loading, error } = this.state;
 
         const hasData = !( loading || error );
 
         const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const personView = hasData ? <PersonView person={ person }/> : null;
+        const personView = hasData ? <PersonView person={ item }/> : null;
 
         return (
             <div className='personDetails d-flex justify-content-center'>
@@ -74,9 +73,9 @@ export default class PersonDetails extends Component {
     }
 }
 
-const PersonView = ( {person} ) => {
+const PersonView = ( {person: item} ) => {
 
-    const { id, name, gender, birthYear, eyeColor } = person;
+    const { id, name, gender, birthYear, eyeColor } = item;
 
     return (
         <React.Fragment>

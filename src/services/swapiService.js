@@ -4,8 +4,9 @@ export default class SwapiService {
 
     _apiBase = 'https://swapi.co/api';
 
+
     getResource = async ( url ) => {
-        const res = await fetch( `${this._apiBase}${url}` );
+        const res = await fetch( `${this._apiBase}${url}`);
 
         if ( !res.ok ) {
             throw new Error( ` Nothing is find on ${url} 404 error` );
@@ -40,7 +41,7 @@ export default class SwapiService {
     };
 
     getStarship = async ( id ) => {
-        const starship = await this.getResource( `/starships/${id}/` );
+        const starship = await this.getResource( `starships/${id}/` );
         return this._transrofmStarship( starship );
     };
 
@@ -65,11 +66,11 @@ export default class SwapiService {
             name: starship.name,
             model: starship.model,
             manufacturer: starship.manufacturer,
-            costInCredits: starship.costInCredits,
+            costInCredits: starship.cost_in_credits,
             length: starship.length,
             crew: starship.crew,
             passengers: starship.passengers,
-            cargoCapacity: starship.cargoCapacity
+            cargoCapacity: starship.cargo_capacity
         }
     };
 
