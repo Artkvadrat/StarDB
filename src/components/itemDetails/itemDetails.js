@@ -6,12 +6,11 @@ import Spinner from "../spinner/spinner";
 
 export default class ItemDetails extends Component {
 
-    swapiService = new SwapiService();
-
     state = {
         item: {},
         loading: true,
-        error: false
+        error: false,
+        image: null
     };
 
     componentDidMount() {
@@ -36,9 +35,13 @@ export default class ItemDetails extends Component {
     };
 
     onItemLoaded = (item) => {
+
+        const { getImageUrl } = this.props;
+
         this.setState({
             item,
-            loading: false
+            loading: false,
+            image: getImageUrl(item)
         })
     };
 
@@ -55,13 +58,13 @@ export default class ItemDetails extends Component {
     render() {
 
 
-        const { item, loading, error } = this.state;
+        const { item, loading, error, image } = this.state;
 
         const hasData = !( loading || error );
 
         const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const personView = hasData ? <PersonView person={ item }/> : null;
+        const personView = hasData ? <PersonView item={ item } img={ image }/> : null;
 
         return (
             <div className='personDetails d-flex justify-content-center'>
@@ -73,15 +76,17 @@ export default class ItemDetails extends Component {
     }
 }
 
-const PersonView = ( {person: item} ) => {
+const PersonView = ( { item, img } ) => {
 
-    const { id, name, gender, birthYear, eyeColor } = item;
+    const { name, gender, birthYear, eyeColor } = item;
+    const { image } = img;
+
 
     return (
         <React.Fragment>
             <div>
                     <img className="personImage"
-                         src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+                         src={ image }
                          alt={ name }/>
                 </div>
 

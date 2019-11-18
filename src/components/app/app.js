@@ -30,20 +30,22 @@ export default class App extends Component {
             return <ErrorIndicator/>
         }
 
-        const { getPerson, getStarship } = this.swapiService;
+        const { getPerson, getStarship, getPersonImage, getStarshipImage } = this.swapiService;
 
 
         const personDetails = (
             <ItemDetails
                 itemId={11}
                 getData={ getPerson }
+                getImageUrl={getPersonImage}
             />
         );
 
         const starshipDetails = (
             <ItemDetails
-                itemId={1}
+                itemId={9}
                 getData={ getStarship }
+                getImageUrl={getStarshipImage}
             />
         );
 
