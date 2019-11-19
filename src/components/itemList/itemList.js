@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import './itemList.css';
 
-
-import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
+import Spinner from "../spinner/spinner";
 
 export default class ItemList extends Component{
 
@@ -59,7 +58,6 @@ export default class ItemList extends Component{
     render() {
 
         const { itemList, loading, error } = this.state;
-        console.log( itemList );
 
         const hasData = !( loading || error );
 

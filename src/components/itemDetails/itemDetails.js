@@ -49,12 +49,10 @@ export default class ItemDetails extends Component {
 
         const { getImageUrl } = this.props;
 
-       let res =  getImageUrl(item);
-
         this.setState({
             item,
             loading: false,
-            image: res
+            image: getImageUrl(item)
         })
     };
 
@@ -62,6 +60,10 @@ export default class ItemDetails extends Component {
     updateItem = (  ) => {
 
         const { itemId, getData } = this.props;
+
+        console.log('ID' + itemId);
+        console.log('fun' + getData);
+
 
         getData( itemId )
             .then( this.onItemLoaded )

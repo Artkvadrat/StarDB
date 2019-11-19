@@ -9,6 +9,7 @@ import ErrorIndicator from "../errorIndicator/errorIndicator";
 import SwapiService from "../../services/swapiService";
 import ItemDetails, { Record } from "../itemDetails/itemDetails";
 import Row from "../rowComponent/rowComponent";
+import PeoplePage from "../peoplePage/peoplePage";
 
 export default class App extends Component {
 
@@ -72,10 +73,7 @@ export default class App extends Component {
                                 <RandomPlanet />
                             </div>
 
-                            <Row
-                                left={personDetails}
-                                right={starshipDetails}
-                            />
+                            <PeoplePage/>
 
                         </div>
                     </div>
