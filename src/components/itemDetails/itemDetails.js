@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import './itemDetails.css';
-import SwapiService from "../../services/swapiService";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 import Spinner from "../spinner/spinner";
+
+
+const Record = ({ item, field, label }) => {
+    return (
+        <li className='list-group-item'>
+            <span className='term'>{label}</span>
+            <span>{ item[field] }</span>
+        </li>
+    )
+};
+export { Record };
+
 
 export default class ItemDetails extends Component {
 
@@ -38,10 +49,12 @@ export default class ItemDetails extends Component {
 
         const { getImageUrl } = this.props;
 
+       let res =  getImageUrl(item);
+
         this.setState({
             item,
             loading: false,
-            image: getImageUrl(item)
+            image: res
         })
     };
 
@@ -64,7 +77,7 @@ export default class ItemDetails extends Component {
 
         const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const personView = hasData ? <PersonView item={ item } img={ image }/> : null;
+        const personView = hasData ? <PersonView item={ item } img={ image } props={this.props}/> : null;
 
         return (
             <div className='personDetails d-flex justify-content-center'>
@@ -76,36 +89,27 @@ export default class ItemDetails extends Component {
     }
 }
 
-const PersonView = ( { item, img } ) => {
+const PersonView = ( { item, img, props } ) => {
 
-    const { name, gender, birthYear, eyeColor } = item;
-    const { image } = img;
-
+    const { name } = item;
 
     return (
         <React.Fragment>
             <div>
                     <img className="personImage"
-                         src={ image }
+                         src={ img }
                          alt={ name }/>
                 </div>
 
                 <div className='personList'>
-                    <h3> { name }</h3>
+                    <h3>{ name }</h3>
 
                     <ul className="list-group list-group-flush">
-                        <li className='list-group-item'>
-                            <span className='term'>Gender</span>
-                            <span>{ gender }</span>
-                        </li>
-                        <li className='list-group-item'>
-                            <span className='term'>Birth Year</span>
-                            <span>{ birthYear }</span>
-                        </li>
-                        <li className='list-group-item'>
-                            <span className='term'>Eye Color</span>
-                            <span>{ eyeColor }</span>
-                        </li>
+                        {
+                            React.Children.map( props.children, ( child, idx ) => {
+                                return React.cloneElement(child, { item });
+                            })
+                        }
                     </ul>
                 </div>
         </React.Fragment>

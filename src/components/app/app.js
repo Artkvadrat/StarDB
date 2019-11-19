@@ -4,10 +4,10 @@ import './app.css';
 import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
 
-import PeoplePage from "../peoplePage/peoplePage";
+import ItemList from "../itemList/itemList";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 import SwapiService from "../../services/swapiService";
-import ItemDetails from "../itemDetails/itemDetails";
+import ItemDetails, { Record } from "../itemDetails/itemDetails";
 import Row from "../rowComponent/rowComponent";
 
 export default class App extends Component {
@@ -37,18 +37,30 @@ export default class App extends Component {
             <ItemDetails
                 itemId={11}
                 getData={ getPerson }
-                getImageUrl={getPersonImage}
-            />
+                getImageUrl={getPersonImage}>
+
+                <Record field='gender' label='Gender -'/>
+                <Record field='birthYear' label='Birth year -'/>
+                <Record field='eyeColor' label='Eye color -'/>
+
+            </ItemDetails>
         );
 
         const starshipDetails = (
             <ItemDetails
                 itemId={9}
                 getData={ getStarship }
-                getImageUrl={getStarshipImage}
-            />
-        );
+                getImageUrl={getStarshipImage}>
 
+                <Record field='manufacturer' label='Manufacturer -'/>
+                <Record field='model' label='Model -'/>
+                <Record field='passengers' label='Passengers -'/>
+                <Record field='crew' label='Crew -'/>
+                <Record field='length' label='Length -'/>
+                <Record field='costInCredits' label='Cost -'/>
+
+            </ItemDetails>
+        );
 
         return(
             <div className='container-fluid'>
