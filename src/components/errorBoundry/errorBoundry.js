@@ -18,8 +18,6 @@ export default class ErrorBoundry extends Component {
 
     render() {
 
-        console.log(this.props.children);
-
         if ( this.state.errorIndicator) {
             return <ErrorIndicator/>
         }

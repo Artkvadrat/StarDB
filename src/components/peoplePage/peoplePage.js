@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './peoplePage.css';
-import ItemDetails, {Record} from "../itemDetails/itemDetails";
-import ItemList from "../itemList/itemList";
+
 import ErrorBoundry from "../errorBoundry/errorBoundry";
-import SwapiService from "../../services/swapiService";
 import Row from "../rowComponent/rowComponent";
+import { PersonList } from '../sw-components/itemLists'
+import { PersonDetails } from '../sw-components/itemDetails'
 
 
 export default class PeoplePage extends Component {
-
-    swapiService = new SwapiService();
 
     state = {
         selectedPerson: 1
@@ -23,29 +21,10 @@ export default class PeoplePage extends Component {
 
     render() {
 
-        const { getPerson, getPersonImage, getAllPeople } = this.swapiService;
-
-        const itemList = (
-            <ItemList
-                onItemSelected={ this.onPersonSelected }
-                getData={ getAllPeople }>
-                {(i) => (
-                    `${i.name} (${i.birthYear})`
-                )}
-            </ItemList>
-        );
+        const itemList = <PersonList onItemSelected={ this.onPersonSelected } />;
 
         const personDetails = (
-            <ItemDetails
-                itemId={ this.state.selectedPerson  }
-                getData={ getPerson }
-                getImageUrl={ getPersonImage }>
-
-                <Record field='gender' label='Gender -'/>
-                <Record field='birthYear' label='Birth year -'/>
-                <Record field='eyeColor' label='Eye color -'/>
-
-            </ItemDetails>
+            <PersonDetails itemId={this.state.selectedPerson}/>
         );
 
         return (

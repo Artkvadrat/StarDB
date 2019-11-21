@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hocHelper/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sw-components/itemDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sw-components/itemLists.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hocHelper/withData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hocHelper/withData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/itemList/itemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemList/itemList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" afterDir="false" />
     </list>
@@ -104,7 +107,8 @@
       <workItem from="1573753437233" duration="7326000" />
       <workItem from="1574100253753" duration="6325000" />
       <workItem from="1574156345620" duration="7328000" />
-      <workItem from="1574185449492" duration="3390000" />
+      <workItem from="1574185449492" duration="3909000" />
+      <workItem from="1574339822012" duration="7856000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -211,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574166442344</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting.">
+      <created>1574189248400</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1574189248400</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +266,7 @@
     <MESSAGE value="Added a img showing functions in &quot;SwapiService&quot;, but it doesn't work yet." />
     <MESSAGE value="Added a img showing and a labels showing on different types of elements (planet, starship, person)." />
     <MESSAGE value="Added a not working &quot;withData&quot; HOC." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a not working &quot;withData&quot; HOC." />
+    <MESSAGE value="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting." />
   </component>
 </project>

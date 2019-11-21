@@ -61,10 +61,6 @@ export default class ItemDetails extends Component {
 
         const { itemId, getData } = this.props;
 
-        console.log('ID' + itemId);
-        console.log('fun' + getData);
-
-
         getData( itemId )
             .then( this.onItemLoaded )
             .catch( this.onError )
@@ -79,7 +75,7 @@ export default class ItemDetails extends Component {
 
         const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const personView = hasData ? <PersonView item={ item } img={ image } props={this.props}/> : null;
+        const personView = hasData ? <DetailedView item={ item } img={ image } props={this.props}/> : null;
 
         return (
             <div className='personDetails d-flex justify-content-center'>
@@ -91,7 +87,7 @@ export default class ItemDetails extends Component {
     }
 }
 
-const PersonView = ( { item, img, props } ) => {
+const DetailedView = ( { item, img, props } ) => {
 
     const { name } = item;
 
