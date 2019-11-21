@@ -4,7 +4,7 @@ import './peoplePage.css';
 import ErrorBoundry from "../errorBoundry/errorBoundry";
 import Row from "../rowComponent/rowComponent";
 import { PersonList } from '../sw-components/itemLists'
-import { PersonDetails } from '../sw-components/itemDetails'
+import PersonDetails from "../sw-components/personDetails";
 
 
 export default class PeoplePage extends Component {

@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/sw-components/itemDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sw-components/itemLists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hocHelper/withSwapiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sw-components/personDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sw-components/planetDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sw-components/starshipDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hocHelper/withData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hocHelper/withData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/itemList/itemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemList/itemList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sw-components/itemDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/swapiServiceContext/swapiServiceContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/swapiServiceContext/swapiServiceContext.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +109,8 @@
       <workItem from="1574100253753" duration="6325000" />
       <workItem from="1574156345620" duration="7328000" />
       <workItem from="1574185449492" duration="3909000" />
-      <workItem from="1574339822012" duration="7856000" />
+      <workItem from="1574339822012" duration="10225000" />
+      <workItem from="1574365526432" duration="2159000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574189248400</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added a directory &quot;sw-components&quot; with components to show in &quot;app.js&quot;. This was made to reduce code amount in main file.">
+      <created>1574348691275</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574348691275</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +276,7 @@
     <MESSAGE value="Added a img showing and a labels showing on different types of elements (planet, starship, person)." />
     <MESSAGE value="Added a not working &quot;withData&quot; HOC." />
     <MESSAGE value="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting." />
+    <MESSAGE value="Added a directory &quot;sw-components&quot; with components to show in &quot;app.js&quot;. This was made to reduce code amount in main file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a directory &quot;sw-components&quot; with components to show in &quot;app.js&quot;. This was made to reduce code amount in main file." />
   </component>
 </project>
