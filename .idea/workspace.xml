@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/hocHelper/withSwapiService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sw-components/personDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sw-components/planetDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sw-components/starshipDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sw-components/itemDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/swapiServiceContext/swapiServiceContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/swapiServiceContext/swapiServiceContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/itemDetails/itemDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/planetDetails/planetDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/planetPage/planetPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/planetDetails/planetDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/planetPage/planetPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/randomPlanet/randonPlanet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/randomPlanet/randonPlanet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/starshipDetails/starshipDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/starshipDetails/starshipDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -110,7 +109,10 @@
       <workItem from="1574156345620" duration="7328000" />
       <workItem from="1574185449492" duration="3909000" />
       <workItem from="1574339822012" duration="10225000" />
-      <workItem from="1574365526432" duration="2159000" />
+      <workItem from="1574365526432" duration="2454000" />
+      <workItem from="1574438466242" duration="49000" />
+      <workItem from="1574438530571" duration="1175000" />
+      <workItem from="1574619393463" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -231,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574348691275</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added a high order component to use a swapiService as a context in files that show details. Also I have made a refactor of details showing directory.">
+      <created>1574367971767</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1574367971767</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +286,7 @@
     <MESSAGE value="Added a not working &quot;withData&quot; HOC." />
     <MESSAGE value="Added a high order component &quot;withData&quot; that has a logic part of &quot;ItemList&quot; component. So now I can reuse it without copypasting." />
     <MESSAGE value="Added a directory &quot;sw-components&quot; with components to show in &quot;app.js&quot;. This was made to reduce code amount in main file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a directory &quot;sw-components&quot; with components to show in &quot;app.js&quot;. This was made to reduce code amount in main file." />
+    <MESSAGE value="Added a high order component to use a swapiService as a context in files that show details. Also I have made a refactor of details showing directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a high order component to use a swapiService as a context in files that show details. Also I have made a refactor of details showing directory." />
   </component>
 </project>

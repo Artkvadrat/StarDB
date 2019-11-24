@@ -8,17 +8,29 @@ import ErrorIndicator from "../errorIndicator/errorIndicator";
 
 export default class RandomPlanet extends Component{
 
+    static defaultProps = {
+        updateInterval: 30000
+    };
+
     swapiService = new SwapiService();
 
     state = {
         planet: {},
-        loading: true,
-        error: false
+        loading: true
     };
 
     componentDidMount() {
+        const {updateInterval} = this.props;
         this.updatePlanet();
-        this.interval = setInterval( this.updatePlanet, 15000 );
+        this.interval = setInterval( this.updatePlanet, updateInterval );
+    }
+
+    componentDidCatch(error, errorInfo) {
+        console.error(error);
+        console.log(errorInfo);
+        return (
+            <ErrorIndicator/>
+        )
     }
 
     componentWillUnmount() {  // to clean up a functions like "setInterval";
@@ -32,13 +44,6 @@ export default class RandomPlanet extends Component{
         } )
     };
 
-    onError = ( err ) => {
-        this.setState( {
-            error: true,
-            loading: false
-        });
-    };
-
     updatePlanet = () => {
         let id =  Math.floor(Math.random()*50) + 2;
         this.swapiService
@@ -49,24 +54,19 @@ export default class RandomPlanet extends Component{
 
     render() {
 
-        const { planet, loading, error } = this.state;
+        const { planet, loading } = this.state;
 
-        const hasData = !( loading || error );
-
-        const errorMessage = error ? <ErrorIndicator/> : null;   // catcher of error and a spinner
         const spinner = loading ? <Spinner/> : null;
-        const planetView = hasData ? <PlanetView planet={planet}/> : null;
+        const planetView = planet ? <PlanetView planet={planet}/> : null;
 
         return (
             <div className='randomPlanet d-flex justify-content-center'>
-                { errorMessage }
                 { spinner }
                 { planetView }
             </div>
         )
     }
 }
-
 
 const PlanetView = ( { planet } ) => {
 

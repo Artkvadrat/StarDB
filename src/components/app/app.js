@@ -5,10 +5,10 @@ import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 import PeoplePage from "../peoplePage/peoplePage";
+import PlanetPage from "../planetPage/planetPage";
+import StarshipPage from "../starshipPage/starshipPage";
 import { SwapiServiceProvider } from "../swapiServiceContext/swapiServiceContext";
 import SwapiService from "../../services/swapiService";
-import PlanetDetails from "../sw-components/planetDetails";
-import StarshipDetails from "../sw-components/starshipDetails";
 
 export default class App extends Component {
 
@@ -36,6 +36,9 @@ export default class App extends Component {
 
                                 <PeoplePage/>
 
+                                <PlanetPage/>
+
+                                <StarshipPage/>
                             </div>
                         </div>
                     </div>

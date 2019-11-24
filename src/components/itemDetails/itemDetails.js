@@ -20,7 +20,6 @@ export default class ItemDetails extends Component {
     state = {
         item: {},
         loading: true,
-        error: false,
         image: null
     };
 
@@ -28,22 +27,25 @@ export default class ItemDetails extends Component {
         this.updateItem();
     }
 
+    componentDidCatch(error, errorInfo) {
+        console.error(error);
+        console.log(errorInfo);
+        return (
+            <ErrorIndicator/>
+        )
+    }
+
     componentDidUpdate(prevProps) { // we use it if something will change during execution
         if ( this.props.itemId !== prevProps.itemId ) { // if use in componentDidUpdate a setState, we should
                                                             // use a if statement
             this.setState({
+                item: {},
+                image: null,
                 loading: true
             });
             this.updateItem();
         }
     }
-
-    onError = ( err ) => {
-        this.setState( {
-            error: true,
-            loading: false
-        });
-    };
 
     onItemLoaded = (item) => {
 
@@ -63,23 +65,18 @@ export default class ItemDetails extends Component {
 
         getData( itemId )
             .then( this.onItemLoaded )
-            .catch( this.onError )
     };
 
     render() {
 
 
-        const { item, loading, error, image } = this.state;
+        const { item, loading, image } = this.state;
 
-        const hasData = !( loading || error );
-
-        const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const personView = hasData ? <DetailedView item={ item } img={ image } props={this.props}/> : null;
+        const personView = image ? <DetailedView item={ item } img={ image } props={this.props}/> : null;
 
         return (
             <div className='personDetails d-flex justify-content-center'>
-                { errorMessage }
                 { spinner }
                 { personView }
             </div>
