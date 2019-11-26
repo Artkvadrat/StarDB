@@ -10,7 +10,7 @@ import StarshipDetails from "../sw-components/starshipDetails";
 export default class StarshipPage extends Component {
 
     state = {
-        selectedShip: 2
+        selectedShip: 9
     };
 
     onStarshiplected = (id) => {

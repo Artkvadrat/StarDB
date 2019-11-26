@@ -10,7 +10,7 @@ import PlanetDetails from "../sw-components/planetDetails";
 export default class PlanetPage extends Component {
 
     state = {
-        selectedPlanet: 1
+        selectedPlanet: 2
     };
 
     onPlanetSelected = (id) => {

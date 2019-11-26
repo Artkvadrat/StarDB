@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -7,28 +8,19 @@ const Header = () => {
         <div className='header d-flex justify-content-center'>
             <h2>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="">
+                <Link to="/">
                     Star DB
-                </a>
+                </Link>
             </h2>
             <ul>
                 <li>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#">
-                        People
-                    </a>
+                    <Link to="/people"> People </Link>
                 </li>
                 <li>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#">
-                        Planets
-                    </a>
+                     <Link to='/planets'> Planets </Link>
                 </li>
                 <li>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#">
-                        Starships
-                    </a>
+                    <Link to='/starships'> Starships </Link>
                 </li>
             </ul>
         </div>
