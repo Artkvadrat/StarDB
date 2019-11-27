@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9663d30-2e70-4d90-bfd0-0f0da2a1c845" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/pages/peoplePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/peoplePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/starshipPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/planetPage/planetPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/planetPage/planetPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/peoplePage/peoplePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/planetPage/planetPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/planetPage/planetPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/planetPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/secretPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/starshipPage/starshipPage.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\_Projects\React Bootcamp\Star-DB\src\components\pages" />
       <recent name="E:\_Projects\React Bootcamp\Star-DB\public" />
     </key>
   </component>
@@ -114,7 +122,10 @@
       <workItem from="1574619393463" duration="3827000" />
       <workItem from="1574672150336" duration="12000" />
       <workItem from="1574708795463" duration="2321000" />
-      <workItem from="1574779512249" duration="3317000" />
+      <workItem from="1574779512249" duration="3650000" />
+      <workItem from="1574790088911" duration="2690000" />
+      <workItem from="1574857978625" duration="3428000" />
+      <workItem from="1574874398480" duration="1604000" />
     </task>
     <task id="LOCAL-00001" summary="File &quot;index.js&quot; with simple fetch request.">
       <created>1572983019747</created>
@@ -256,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574711155125</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="I have added a router components in App.js. Now app can switch between components for people, planets, starships.">
+      <created>1574783146619</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1574783146619</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +323,7 @@
     <MESSAGE value="Added a high order component to use a swapiService as a context in files that show details. Also I have made a refactor of details showing directory." />
     <MESSAGE value="I have refactored a code in components and added a &quot;StarshipPage&quot; and &quot;PlanetPage&quot;." />
     <MESSAGE value="I have added a propTypes verification in 'itemList.js' and in 'randomPlanet.js'." />
-    <option name="LAST_COMMIT_MESSAGE" value="I have added a propTypes verification in 'itemList.js' and in 'randomPlanet.js'." />
+    <MESSAGE value="I have added a router components in App.js. Now app can switch between components for people, planets, starships." />
+    <option name="LAST_COMMIT_MESSAGE" value="I have added a router components in App.js. Now app can switch between components for people, planets, starships." />
   </component>
 </project>

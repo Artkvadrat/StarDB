@@ -4,20 +4,31 @@ import './app.css';
 import Header from '../header/header';
 import RandomPlanet from "../randomPlanet/randonPlanet";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
-import PeoplePage from "../peoplePage/peoplePage";
-import PlanetPage from "../planetPage/planetPage";
-import StarshipPage from "../starshipPage/starshipPage";
+import PeoplePage from "../pages/peoplePage";
+import PlanetPage from "../pages/planetPage";
+import StarshipPage from "../pages/starshipPage";
+import SecretPage from "../pages/secretPage";
+import LoginPage from "../pages/loginPage";
 //swapiService importing
 import { SwapiServiceProvider } from "../swapiServiceContext/swapiServiceContext";
 import SwapiService from "../../services/swapiService";
 //router importing
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import StarshipDetails from "../sw-components/starshipDetails";
 
 export default class App extends Component {
 
     swapiService = new SwapiService();
 
+    state = {
+        isLoggedIn: false
+    };
+
+    onLogin = () => {
+        this.setState({
+            isLoggedIn: true
+        })
+    };
 
     componentDidCatch() {
         return (
@@ -26,6 +37,8 @@ export default class App extends Component {
     }
 
     render() {
+
+        const { isLoggedIn } = this.state;
 
         return(
             <SwapiServiceProvider value={ this.swapiService }>
@@ -39,17 +52,33 @@ export default class App extends Component {
                                         <RandomPlanet />
                                     </div>
 
-                                    <Route path="/"
-                                           render={ () => <h2>Welcome to StarDB</h2> }
-                                           exact={true} />
-                                    <Route path="/people" component={ PeoplePage } />
-                                    <Route path="/planets" component={ PlanetPage } />
-                                    <Route path="/starships" component={ StarshipPage } exact/>
-                                    <Route path="/starships/:id"
-                                           render={ ({ match }) => {
-                                               const { id } = match.params;
-                                               return <StarshipDetails itemId={id}/>
-                                           }} />
+                                    <Switch>
+                                        <Route path="/"
+                                               render={ () => <h2>Welcome to StarDB</h2> }
+                                               exact={true} />
+                                        <Route path="/people/:id?" component={ PeoplePage } />
+                                        <Route path="/planets" component={ PlanetPage } />
+                                        <Route path="/starships" component={ StarshipPage } exact/>
+                                        <Route path="/starships/:id"
+                                               render={ ({ match }) => {
+                                                   const { id } = match.params;
+                                                   return <StarshipDetails itemId={id}/>
+                                               }} />
+                                        <Route path="/login"
+                                                render={ () => (
+                                                   <LoginPage
+                                                   isLoggedIn={isLoggedIn}
+                                                   onLogin={ this.onLogin }/>
+                                                )}
+                                        />
+                                        <Route path="/secret"
+                                                render={ () => (
+                                                    <SecretPage
+                                                    isLoggedIn={isLoggedIn}/>
+                                                )}/>
+
+                                        <Route component={ErrorIndicator}/>
+                                    </Switch>
 
                                 </div>
                             </div>

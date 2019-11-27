@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './planetPage.css';
 
 import ErrorBoundry from "../errorBoundry/errorBoundry";
 import Row from "../rowComponent/rowComponent";

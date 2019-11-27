@@ -26,6 +26,7 @@
 
 .header h2 {
     margin-right: 70px;
+    padding-top: 0;
 }
 
 .header h2 a:hover{
